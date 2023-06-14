@@ -19,42 +19,43 @@ function App() {
       <div className="header">
         <img height="35px" width="35px" src="./logo.png" />
         <div className="announcementbar">Podcast For Us All</div>
-        <input className="searchbar" onChange={(e)=>handleChange(e)}/>
+        <div style={{display: "flex", alignItems: "center"}}>
+          <div style={{paddingRight: "5px"}}>Search</div>
+          <input style={{marginRight: "5px"}} className="searchbar"onChange={(e)=>handleChange(e)}/>
+        </div>
       </div>
       <div className="nav">
         <div className="left-nav">
           <div>Podcast</div>|
-          <div>Favorits</div>|
+          <div>Favorites</div>|
           <div>Contact</div>|
           <div>About Us</div>|
         </div>
         <div className="right-nav">
-          <div>Log In</div>
-          <div>Register</div>
+          <div>Log In</div>|
+          <div>Register</div>|
         </div>
       </div>
       <div className="banner"
-        style={{backgroundImage: `url(${banner})`,
-                backgroundPosition: "center top",
-                backgroundRepeat: "no-repeat",
-                height: "80vh",
-                backgroundSize: "cover"}}
+        style={{backgroundImage: `url(${banner}), url(${blobbackground})`,
+                backgroundPosition: "center top, top right",
+                backgroundRepeat: "no-repeat, no-repeat",
+                height: "70%",
+                backgroundSize: "cover"
+              }}
         >
-        <div className="blobbackground"
-          style={{backgroundImage: `url(${blobbackground})`,
-                backgroundPosition: "right center",
-                backgroundRepeat: "no-repeat",
-                height: "600px",
-                backgroundSize: "auto"}}
-        >
-         <div className="blobbackgroundtext">
-            <p>View podcast, save your Favorits, and join the fun!</p>
+        <div className="calltoaction">
+          <div className="bannerbuttondiv">
+              <button className="bannerbutton">Get Started</button>
+            </div>
+           <div className="blobbackgroundtext">
+              <p>View podcast, save your Favorites, and join the fun!</p>
+            </div>
           </div>
         </div>
-
         <div className="podcastcarousel"></div>
 
-      </div>
+      
     </>
   )
 }
