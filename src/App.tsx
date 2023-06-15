@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import banner from './assets/banner.png'
+import image1 from './assets/1.png'
+import image2 from './assets/2.png'
+import image3 from './assets/3.png'
+import image4 from './assets/4.png'
 import blobbackground from './assets/blobbackground.png'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -17,7 +20,7 @@ function App() {
   return (
     <>
       <div className="header">
-        <img height="35px" width="35px" src="./logo.png" />
+        <img className="logo" height="35px" width="35px" src="./logo.png" />
         <div className="announcementbar">Podcast For Us All</div>
         <div style={{display: "flex", alignItems: "center"}}>
           <div style={{paddingRight: "5px"}}>Search</div>
@@ -44,6 +47,7 @@ function App() {
                 backgroundSize: "cover"
               }}
         >
+        <h1 style={{color: "white"}}> Wicked Podcast For All!</h1>
         <div className="calltoaction">
           <div className="bannerbuttondiv">
               <button className="bannerbutton">Get Started</button>
@@ -53,8 +57,16 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="podcastcarousel"></div>
-
+        <div className="podcastcarousel">
+           <div className="box"><img src={image1} /></div>
+           <div className="box"><img src={image2} /></div>
+           <div className="box"><img src={image3} /></div>
+           <div className="box"><img src={image4} /></div>
+            <div className="morebutton">
+                  More.
+            </div>
+        </div>
+        
       
     </>
   )
