@@ -56,7 +56,7 @@
 }
 .banner {
   border-radius: 100px;
-  position: relative;
+/*  position: relative;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,31 +103,40 @@
   font-size: 1.3rem;
   color: white;
 }
-.podcastcarousel {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+.carousel {
+  cursor: grab;
+  border-radius: 20px;
+  border: purple 2px solid;
+  overflow: hidden;
+  margin: 0 10%;
+/*  margin-left: auto;
+  margin-right: auto;*/
+  background-color: rgba(255, 105, 180);
+  box-shadow: inset 0px 0px 20px 3px rgba(255, 255, 255, 1.0);
 
-.podcastcarousel .box img {
+
+
+}
+.innercarousel {
+  display: flex;
+  align-items: center;
+
+}
+.item {
+  min-height: 350px;
+  min-width: auto;
+  padding: 20px;
+}
+.item img {
   height: 350px;
-  width: 350px;
-  position: relative;
+  min-width: auto;
   border: #2BFFD9 3px solid;
+  margin: 10px;
   border-radius: 100px;
   box-shadow: inset 0px 0px 20px -5px rgba(255, 255, 255, 1.0);
-  cursor: pointer;
-}
-.box img:hover {
-  animation: logo-spin infinite 5s linear;
+  pointer-events: none;
 }
 
-.podcastcarousel .progress-bar {
-  position: absolute;
-  top: 0;
-  right: 10px;
-
-}
 .morebutton {
   font-weight: bolder;
   font-size: 1.5rem;
