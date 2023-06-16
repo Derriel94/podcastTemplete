@@ -15,7 +15,7 @@ export default function Slider() {
 				{images.map(image=>{
 					return (
 						<motion.div className="item">
-							<img src={image} key={image}alt="" />
+							<img src={image} key={image} alt="" />
 						</motion.div>
 						);
 				})}

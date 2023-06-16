@@ -41,14 +41,9 @@ function App() {
         </div>
       </div>
       <div className="banner"
-        style={{backgroundImage: `url(${banner}), url(${blobbackground})`,
-                backgroundPosition: "center top, top right",
-                backgroundRepeat: "no-repeat, no-repeat",
-                height: "70%",
-                backgroundSize: "cover"
-              }}
+      
         >
-        <h1 style={{color: "white"}}> Wicked Podcast For All!</h1>
+        <h1 style={{color: "white"}}> Tech Podcast For All!</h1>
         <div className="calltoaction">
           <div className="bannerbuttondiv">
               <button className="bannerbutton">Get Started</button>
@@ -58,12 +53,23 @@ function App() {
             </div>
           </div>
         </div>
-        <h1>Podcasts</h1>
+        <h1>Recent Podcasts</h1>
+        <div>
         <Slider/>
-       {/* <div className="morebutton">
-                  More.
-            </div>*/}
-      
+        </div>
+        <div className="footer">
+          <div className="footernav">
+            <div>Podcast</div>
+            <div>Favorites</div>
+            <div>Contact</div>
+            <div>About Us</div>
+          </div>
+          <div className="footerlinks">
+              <div><a href="">terms of use</a></div>
+              <div><a href="">privacy</a></div>
+              <div><a href="">© 2023 CollinsCode</a></div>
+          </div>
+        </div>
     </>
   )
 }
