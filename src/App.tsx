@@ -1,17 +1,13 @@
 import { useState, useRef } from 'react'
-import reactLogo from './assets/react.svg'
-import banner from './assets/banner.png'
 import { motion } from "framer-motion";
-import Slider from './components/Slider';
-import blobbackground from './assets/blobbackground.png'
+import Slider from './components/Slider.jsx';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [searchbar, setSearchBar] = useState('');
+  const [searchbar, setSearchBar] = useState('search');
   const [displayMobileNav, setDisplayMobileNav] = useState(false);
   const header = useRef();
-  const mobileMenuItems = [];
+  // const mobileMenuItems = [];
 
   const switchMobileNav = () => {
     if (displayMobileNav == false) {
@@ -23,7 +19,7 @@ function App() {
     
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchBar(e.target.value);
   }
 
@@ -33,8 +29,8 @@ function App() {
         <img className="logo" onClick={switchMobileNav} height="35px" width="35px" src="./logo.png" />
         <div className="announcementbar">Podcast For Us All</div>
         <div style={{display: "flex", alignItems: "center"}}>
-          <div style={{paddingRight: "5px"}}>Search</div>
-          <input style={{marginRight: "5px"}} className="searchbar"onChange={(e)=>handleChange(e)}/>
+          <div style={{paddingRight: "5px"}}></div>
+          <input style={{marginRight: "5px"}} placeholder={searchbar} className="searchbar"onChange={(e)=>handleChange(e)}/>
         </div>
       </div>
         <motion.div 
